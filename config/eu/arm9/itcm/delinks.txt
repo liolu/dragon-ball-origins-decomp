@@ -1,0 +1,2 @@
+    .text       start:0x01ff8000 end:0x01fff5b4 kind:code align:32
+    .bss        start:0x01fff5c0 end:0x01fff5e0 kind:bss align:32

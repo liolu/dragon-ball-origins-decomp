@@ -1,0 +1,27 @@
+rom_config: ../../../extract/eu/config.yaml
+build_path: ../../../build/eu
+delinks_path: ../../../build/eu/delinks
+main_module:
+  name: main
+  object: ../../../build/eu/build/arm9.bin
+  hash: 464dcca0d7407069
+  delinks: delinks.txt
+  symbols: symbols.txt
+  relocations: relocs.txt
+autoloads:
+  - kind: Itcm
+    name: itcm
+    object: ../../../build/eu/build/itcm.bin
+    hash: e094c59f5349b024
+    delinks: itcm/delinks.txt
+    symbols: itcm/symbols.txt
+    relocations: itcm/relocs.txt
+  - kind: Dtcm
+    name: dtcm
+    object: ../../../build/eu/build/dtcm.bin
+    hash: aeab6c4695635fbf
+    delinks: dtcm/delinks.txt
+    symbols: dtcm/symbols.txt
+    relocations: dtcm/relocs.txt
+overlays:
+  []
