@@ -143,6 +143,12 @@ def try_one(dn, con, f, syms, log, licenses) -> tuple[str, str] | None:
             continue
         incs = con.execute("SELECT incs FROM repo WHERE repo=?", (repo,)).fetchone()[0]
         pre = preprocessed(dn, repo, rel, profile, incs)
+        # Calls the compiler adds by itself (`_u32_div_f`, `_ddiv`...) are not in the source, so they cannot be
+        # renamed to the game's symbol: the link would fail
+        implicit = [s for s in rename if pre and not re.search(rf"\b{re.escape(s)}\b", pre)]
+        if implicit:
+            log(f"  {name}: {repo}:{dname} skipped (implicit runtime call {implicit[0]})")
+            continue
         version, flags = dn.PROFILES[profile]
         status = "source not rebuilt"
         # Only the declarations the function needs first (readable file), else the whole file's declarations
@@ -191,6 +197,28 @@ def verify(created: list[Path], delinks_backup: bytes, compilers_backup: bytes) 
         return subprocess.run([sys.executable, "tools/match.py", "verify"], cwd=ROOT, capture_output=True, text=True)
 
     v = run_verify()
+    for _ in range(8):
+        # Files that do not link, or that objdiff finds different once linked (a relocation to another symbol):
+        # drop them and verify again, the others stay
+        out = v.stdout + v.stderr
+        bad = set(re.findall(r"FAIL: (src/donor/\S+?\.c) is marked complete", out))
+        bad |= {f"src/donor/{n}.c" for n in re.findall(r'Referenced from "\S+" in (func_\w+?)\.o', out)}
+        bad &= {c.relative_to(ROOT).as_posix() for c in created}
+        if v.returncode == 0 or not bad:
+            break
+        print(f"Dropping {len(bad)} file(s) that do not match once linked: " + ", ".join(sorted(bad)[:5]), flush=True)
+        text = project.DELINKS.read_text()
+        for rel in bad:
+            text = re.sub(r"\n" + re.escape(rel) + r":\n    complete\n    \.text[^\n]*\n", "\n", text)
+            (ROOT / rel).unlink(missing_ok=True)
+        project.DELINKS.write_text(text, newline="\n")
+        keep = [l for l in project.COMPILERS_TXT.read_text().splitlines(True) if l.split(" ")[0] not in bad]
+        project.COMPILERS_TXT.write_text("".join(keep), newline="\n")
+        WORK.mkdir(parents=True, exist_ok=True)
+        with (WORK / "culprits.txt").open("a", encoding="utf-8") as f:
+            f.writelines(Path(b).stem + "\n" for b in bad)
+        created = [c for c in created if c.relative_to(ROOT).as_posix() not in bad]
+        v = run_verify()
     if v.returncode != 0:
         import find_culprits
         print("Verification failed: looking for the files that break the ROM...", flush=True)
