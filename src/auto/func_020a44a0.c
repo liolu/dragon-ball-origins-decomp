@@ -1,0 +1,5 @@
+#include "m2c.h"
+
+void func_020a44a0(s32 arg0) {
+    *(s32 *) 0x04000448 = arg0;
+}

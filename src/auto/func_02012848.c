@@ -1,0 +1,7 @@
+#include "m2c.h"
+
+extern M2C_UNK data_020e280c;
+
+void func_02012848(M2C_UNK **arg0) {
+    *arg0 = &data_020e280c;
+}
