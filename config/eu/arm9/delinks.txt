@@ -11709,3 +11709,32 @@ src/auto/func_020c63ac.c:
 src/auto/func_020c6800.c:
     complete
     .text       start:0x020c6800 end:0x020c685c
+
+src/auto/func_02050470.c:
+    complete
+    .text       start:0x02050470 end:0x020504bc
+
+src/auto/func_0209fbf0.c:
+    complete
+    .text       start:0x0209fbf0 end:0x0209fc18
+
+src/auto/func_020b84fc.c:
+    complete
+    .text       start:0x020b84fc end:0x020b8548
+
+src/auto/func_020ba0b0.c:
+    complete
+    .text       start:0x020ba0b0 end:0x020ba0cc
+
+src/auto/func_020c0cc4.c:
+    complete
+    .text       start:0x020c0cc4 end:0x020c0d14
+
+src/auto/func_020c2da4.c:
+    complete
+    .text       start:0x020c2da4 end:0x020c2ddc
+
+src/auto/func_020c3024.c:
+    complete
+    .text       start:0x020c3024 end:0x020c3074
+
