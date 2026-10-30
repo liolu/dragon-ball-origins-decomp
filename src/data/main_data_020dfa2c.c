@@ -1,0 +1,4 @@
+/* compiler: 2.0/sp1p5 */
+#include "m2c.h"
+
+char data_020dfa2c[36] = "nt_fx01_011_spin_lightning_a.dsf";

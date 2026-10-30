@@ -6495,7 +6495,6 @@ data_020e0f78 kind:data(any) addr:0x020e0f78
 data_020e0f98 kind:data(any) addr:0x020e0f98
 data_020e0fb8 kind:data(any) addr:0x020e0fb8
 data_020e0fd8 kind:data(any) addr:0x020e0fd8
-data_020e0fde kind:data(any) addr:0x020e0fde
 data_020e0ff8 kind:data(any) addr:0x020e0ff8
 data_020e1018 kind:data(any) addr:0x020e1018
 data_020e103c kind:data(any) addr:0x020e103c
@@ -7386,7 +7385,6 @@ data_020ee948 kind:bss addr:0x020ee948
 data_020ee94c kind:bss addr:0x020ee94c
 data_020ee950 kind:bss addr:0x020ee950
 data_020ee954 kind:bss addr:0x020ee954
-data_020ef022 kind:bss addr:0x020ef022
 data_020ef300 kind:bss addr:0x020ef300
 data_020ef318 kind:bss addr:0x020ef318
 data_020ef73c kind:bss addr:0x020ef73c
@@ -7578,7 +7576,6 @@ data_0212a9bc kind:bss addr:0x0212a9bc
 data_0212a9c0 kind:bss addr:0x0212a9c0
 data_0212a9c4 kind:bss addr:0x0212a9c4
 data_0212ad28 kind:bss addr:0x0212ad28
-data_0212ad2b kind:bss addr:0x0212ad2b
 data_0212ae04 kind:bss addr:0x0212ae04
 data_0212ae44 kind:bss addr:0x0212ae44
 data_0212ae50 kind:bss addr:0x0212ae50
@@ -7706,7 +7703,6 @@ data_0214795c kind:bss addr:0x0214795c
 data_02147968 kind:bss addr:0x02147968
 data_0214796c kind:bss addr:0x0214796c
 data_02148324 kind:bss addr:0x02148324
-data_02150fdd kind:bss addr:0x02150fdd
 data_02157078 kind:bss addr:0x02157078
 data_02157084 kind:bss addr:0x02157084
 data_021570a0 kind:bss addr:0x021570a0
@@ -7793,7 +7789,6 @@ data_0215e9ec kind:bss addr:0x0215e9ec
 data_0215e9f8 kind:bss addr:0x0215e9f8
 data_0215eb64 kind:bss addr:0x0215eb64
 data_0215ecd0 kind:bss addr:0x0215ecd0
-data_0215f023 kind:bss addr:0x0215f023
 data_0215f030 kind:bss addr:0x0215f030
 data_0215f03c kind:bss addr:0x0215f03c
 data_0215f048 kind:bss addr:0x0215f048
@@ -8016,7 +8011,6 @@ data_0216f8f0 kind:bss addr:0x0216f8f0
 data_0216f904 kind:bss addr:0x0216f904
 data_0216f914 kind:bss addr:0x0216f914
 data_0216f940 kind:bss addr:0x0216f940
-data_021701db kind:bss addr:0x021701db
 data_02170340 kind:bss addr:0x02170340
 data_02170344 kind:bss addr:0x02170344
 data_02170360 kind:bss addr:0x02170360
