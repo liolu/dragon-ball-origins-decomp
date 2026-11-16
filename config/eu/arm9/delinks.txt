@@ -21219,3 +21219,31 @@ src/data/main_data_020e75c1.c:
 src/data/main_data_020e75c2.c:
     complete
     .data       start:0x020e75c2 end:0x020e75cc
+
+src/auto/func_0200c590.c:
+    complete
+    .text       start:0x0200c590 end:0x0200c5d0
+
+src/auto/func_020174ec.c:
+    complete
+    .text       start:0x020174ec end:0x02017520
+
+src/auto/func_02035d20.c:
+    complete
+    .text       start:0x02035d20 end:0x02035d84
+
+src/auto/func_0208d7d8.c:
+    complete
+    .text       start:0x0208d7d8 end:0x0208d82c
+
+src/auto/func_020aca80.c:
+    complete
+    .text       start:0x020aca80 end:0x020acac8
+
+src/auto/func_020ad080.c:
+    complete
+    .text       start:0x020ad080 end:0x020ad0cc
+
+src/auto/func_020ad0cc.c:
+    complete
+    .text       start:0x020ad0cc end:0x020ad138

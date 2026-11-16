@@ -355,3 +355,10 @@ src/auto/func_0209a000.c 2.0/sp1p5 -O4,s
 src/auto/func_020a063c.c 2.0/sp1p5 -O2
 src/auto/func_020a3eb4.c 2.0/sp1p5 -O2
 src/auto/func_020a3ed8.c 2.0/sp1p5 -O2
+src/auto/func_0200c590.c 2.0/sp1p5 -flag no-opt_rebuildconditionals
+src/auto/func_020174ec.c 2.0/sp1p5 -flag no-opt_rebuildconditionals
+src/auto/func_02035d20.c 1.2/sp3
+src/auto/func_0208d7d8.c 1.2/sp3
+src/auto/func_020aca80.c 2.0/sp1p5 -flag no-opt_rebuildconditionals
+src/auto/func_020ad080.c 2.0/sp1p5 -flag no-opt_rebuildconditionals
+src/auto/func_020ad0cc.c 2.0/sp1p5 -flag no-opt_rebuildconditionals
