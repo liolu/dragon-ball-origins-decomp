@@ -21247,3 +21247,15 @@ src/auto/func_020ad080.c:
 src/auto/func_020ad0cc.c:
     complete
     .text       start:0x020ad0cc end:0x020ad138
+
+src/auto/func_020362d8.c:
+    complete
+    .text       start:0x020362d8 end:0x02036438
+
+src/auto/func_02050590.c:
+    complete
+    .text       start:0x02050590 end:0x020505f0
+
+src/auto/func_02050970.c:
+    complete
+    .text       start:0x02050970 end:0x020509f0

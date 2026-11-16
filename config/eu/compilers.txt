@@ -362,3 +362,6 @@ src/auto/func_0208d7d8.c 1.2/sp3
 src/auto/func_020aca80.c 2.0/sp1p5 -flag no-opt_rebuildconditionals
 src/auto/func_020ad080.c 2.0/sp1p5 -flag no-opt_rebuildconditionals
 src/auto/func_020ad0cc.c 2.0/sp1p5 -flag no-opt_rebuildconditionals
+src/auto/func_020362d8.c 2.0/sp1p5 -flag no-opt_rebuildlogicals
+src/auto/func_02050590.c 2.0/sp1p5 -flag no-opt_rebuildlogicals
+src/auto/func_02050970.c 2.0/sp1p5 -flag no-opt_rebuildlogicals
